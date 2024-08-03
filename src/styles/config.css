@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Atkinson;
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("$styles/assets/atkinson.ttf") format("truetype");
+}
+
+:root {
+  /* font family */
+  --font-family: Atkinson, Helvetica, Verdana, sans-serif;
+
+  /* colors */
+  --prim-color: #3ecf8e;
+  --accent-color: #ff7700;
+  --accent-light: #f5933d;
+  --sec-color: #05acce;
+
+  --fire-color: #f00f08;
+  --bolt-color: #ffd700;
+  --star-color: #3fcf8e;
+
+  --blue-100: #bcd4f8;
+  --blue-200: #92befc;
+  --blue-300: #5094fb;
+  --blue-400: #0d6efd;
+  --blue-500: #021f77;
+
+  --red-100: #f7dfe1;
+  --red-200: #fdadb4;
+  --red-300: #e35d6a;
+  --red-400: #dc3545;
+  --red-500: #5d020b;
+
+  --green-100: #cef8e5;
+  --green-200: #83fbc3;
+  --green-300: #479f76;
+  --green-400: #198754;
+  --green-500: #025930;
+
+  --orange-100: #f5e4d5;
+  --orange-200: #facfac;
+  --orange-300: #fd9843;
+  --orange-400: #fd7e14;
+  --orange-500: #6a3103;
+
+  --gray-100: #e9ecef;
+  --gray-200: #dee2e6;
+  --gray-300: #ced4da;
+  --gray-400: #adb5bd;
+  --gray-500: #6c757d;
+  --gray-600: #495057;
+  --gray-700: #343a40;
+  --gray-800: #212529;
+
+  --dark: #2f2f2f;
+  --dark-shade: #151515;
+
+  --white: #fff;
+  --lite: #efefef;
+
+  --lite-bg: var(--gray-100);
+  --dark-bg: #363737;
+  --night-bg: var(--dark-shade);
+
+  --dark-text: var(--gray-600);
+  --lite-text: var(--gray-400);
+
+  --lite-heading: var(--gray-200);
+  --dark-heading: var(--gray-800);
+
+  --success-color: var(--green-400);
+  --danger-color: var(--red-300);
+  --info-color: var(--blue-300);
+  --warn-color: var(--orange-400);
+
+  /* shadows */
+  --shadow-sm: 0 0.125rem 0.25rem var(--gray-500);
+  --shadow-lg: 0px 3px 8px var(--gray-500);
+  --shadow-top: 0px 0px 10px var(--gray-500);
+  --shadow-inset: var(--gray-500) 0px 0px 2px 0px inset;
+  --shadow-bottom: var(--gray-500) 0px 3px 5px;
+
+  /* radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-base: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 5rem;
+
+  /* border */
+  --solid: 0.1rem solid;
+  --lite-border: var(--solid) var(--lite);
+  --prim-border: var(--solid) var(--prim-color);
+  --sec-border: var(--solid) var(--sec-color);
+  --dark-border: var(--solid) var(--dark);
+  --border: var(--solid) var(--gray-400);
+  --outline: 0.05rem solid var(--gray-500);
+
+  /* measure - line length */
+  --line-minor: 10ch;
+  --line-compact: 28ch;
+  --line-short: 40ch;
+  --line-long: 60ch;
+
+  /* Gap - padding, margin */
+  --gap-nano: 0.25rem;
+  --gap-micro: 0.5rem;
+  --gap-sml: 0.75rem;
+  --gap-base: 1rem;
+  --gap-sm: 1.5rem;
+  --gap-md: 2rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 3rem;
+  --gap-xxl: 4rem;
+  --gap-xxxl: 8rem;
+
+  /* font sizes */
+  --font-nano: 0.55rem;
+  --font-micro: 0.65rem;
+  --font-sml: 0.75rem;
+  --font-sm: 0.85rem;
+  --font-base: 1rem;
+  --font-med: 1.15rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  font-family: var(--font-family);
+  font-size: calc(var(--gap-micro) + 1.8vw);
+  font-weight: normal;
+  box-sizing: border-box;
+}

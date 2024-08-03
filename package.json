@@ -1,0 +1,39 @@
+{
+  "name": "kordome",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "npx vite dev --host",
+    "drizzle:turso": "drizzle-kit push --config=drizzle/turso.ts",
+    "drizzle:neon": "drizzle-kit push --config=drizzle/neon.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@libsql/client": "^0.6.2",
+    "@neondatabase/serverless": "^0.9.3",
+    "@sveltejs/adapter-cloudflare": "^4.4.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/crypto-js": "^4.2.2",
+    "@xata.io/client": "^0.29.5",
+    "cropperjs": "^1.6.2",
+    "crypto-js": "^4.2.0",
+    "drizzle-kit": "^0.22.6",
+    "drizzle-orm": "^0.31.2",
+    "firebase": "^10.12.2",
+    "pocketbase": "^0.21.3",
+    "svelte": "^4.2.7",
+    "svelte-check": "^3.6.0",
+    "svelte-french-toast": "^1.2.0",
+    "svelte-loading-spinners": "^0.3.6",
+    "sveltekit-search-params": "^3.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "uuidv7": "^1.0.1",
+    "vite": "^5.0.3"
+  },
+  "type": "module"
+}

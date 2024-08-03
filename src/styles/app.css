@@ -1,0 +1,241 @@
+@import "$styles/config.css";
+@import "$styles/utils.css";
+@import "$styles/transition.css";
+@import "$styles/form.css";
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100dvh;
+}
+
+body {
+  --text-color: var(--lite-text);
+  --heading-color: var(--lite-heading);
+  --bg-color: var(--dark-bg);
+
+  display: flex;
+  flex-direction: column;
+  overflow: initial;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body:has(.light) {
+  --prim-color: #038349;
+  --text-color: var(--dark-text);
+  --heading-color: var(--dark-heading);
+  --bg-color: var(--lite-bg);
+}
+
+body:has(.night) {
+  --text-color: var(--lite-text);
+  --heading-color: var(--lite-heading);
+  --bg-color: var(--night-bg);
+}
+
+body:has(.system) {
+  --text-color: var(--lite-text);
+  --heading-color: var(--lite-heading);
+  --bg-color: var(--night-bg);
+}
+
+@media (prefers-color-scheme: light) {
+  body:has(.system) {
+    --prim-color: #038349;
+    --text-color: var(--dark-text);
+    --heading-color: var(--dark-heading);
+    --bg-color: var(--lite-bg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body:has(.system) {
+    --text-color: var(--lite-text);
+    --heading-color: var(--lite-heading);
+    --bg-color: var(--dark-bg);
+  }
+}
+
+body > div {
+  background-color: inherit;
+}
+
+main,
+header,
+footer {
+  background-color: inherit;
+  color: inherit;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+  border: none;
+  outline: var(--outline);
+  height: 0;
+  outline-width: 0.05rem;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + * {
+  margin-top: var(--gap-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  color: var(--heading-color);
+  margin: 0;
+}
+
+p,
+label,
+li {
+  margin: 0;
+  font-size: calc(var(--gap-base) + 0.5vw);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-base) var(--gap-sm);
+  z-index: 500;
+  view-transition-name: header;
+  font-size: 1.5rem;
+}
+
+header > div {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.3rem;
+}
+
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+  color: var(--prim-color);
+  text-decoration: none;
+}
+
+a,
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+img {
+  vertical-align: middle;
+  image-rendering: pixelated;
+}
+
+a,
+button,
+svg {
+  cursor: none;
+}
+
+::selection {
+  color: var(--dark);
+  background-color: var(--prim-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a,
+  button,
+  svg {
+    cursor: pointer;
+  }
+}
+
+.highlight {
+  color: var(--prim-color);
+}
