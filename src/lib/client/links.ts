@@ -238,3 +238,13 @@ export const policyLinks = [
     link: "/policies/cookies",
   },
 ];
+
+export const navLinks = [
+  { title: "home", href: "/home" },
+  { title: "about us", href: "/about us" },
+  { title: "contact us", href: "/contacts" },
+  { title: "membership", href: "/membership" },
+  { title: "blogs", href: "/blogs" },
+  { title: "gallery", href: "/gallery" },
+  { title: "resources", href: "/resources" },
+];

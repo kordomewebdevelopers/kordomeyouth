@@ -11,10 +11,8 @@
   --font-family: Atkinson, Helvetica, Verdana, sans-serif;
 
   /* colors */
-  --prim-color: #3ecf8e;
-  --accent-color: #ff7700;
-  --accent-light: #f5933d;
-  --sec-color: #05acce;
+  --prim-color: #05acce;
+  --sec-color: #ff7700;
 
   --fire-color: #f00f08;
   --bolt-color: #ffd700;

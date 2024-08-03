@@ -118,16 +118,6 @@ li {
   font-size: calc(var(--gap-base) + 0.5vw);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--gap-base) var(--gap-sm);
-  z-index: 500;
-  view-transition-name: header;
-  font-size: 1.5rem;
-}
-
 header > div {
   display: flex;
   gap: 1.5rem;
